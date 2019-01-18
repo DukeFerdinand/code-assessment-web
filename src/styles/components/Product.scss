@@ -1,0 +1,19 @@
+.product-wrapper {
+  width: 100%;
+  // max-width: 
+  height: 275px;
+  display: flex;
+  margin: 30px auto;
+  .product-image {
+    flex: .60;
+    background: black + 200;
+    width: 50px;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+  }
+  .product-info {
+    flex: 1;
+    border-radius: 0 8px 8px 0;
+    background: white;
+  }
+}
