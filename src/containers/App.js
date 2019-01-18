@@ -11,7 +11,7 @@ import '../styles/components/App.scss'
 const App = () => (
   <div className="app-container">
     <h2 className="app-title">Acme Store</h2>
-    <hr/>
+    <hr className="divider"/>
     <ProductsContainer />
     <hr/>
     <CartContainer />

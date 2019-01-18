@@ -3,4 +3,11 @@
   .app-title {
     font-size: 2.5em;
   }
+  .divider {
+    height: 0;
+    // Resets the border so we don't have to clear everything
+    border: none;
+    border-top: 1.75px solid;
+    border-color: black + 220 !important;
+  }
 }
