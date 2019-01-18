@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Product from './Product'
 
-const ProductItem = ({ product, onAddToCartClicked }) => (
+const ProductWrapper = ({ product, onAddToCartClicked }) => (
   <div style={{ marginBottom: 20 }}>
     <Product
       title={product.title}
@@ -16,7 +16,7 @@ const ProductItem = ({ product, onAddToCartClicked }) => (
   </div>
 )
 
-ProductItem.propTypes = {
+ProductWrapper.propTypes = {
   product: PropTypes.shape({
     title: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
@@ -25,4 +25,4 @@ ProductItem.propTypes = {
   onAddToCartClicked: PropTypes.func.isRequired
 }
 
-export default ProductItem
+export default ProductWrapper

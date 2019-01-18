@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import Product from './Product'
-import ProductItem from './ProductItem'
+import ProductWrapper from './ProductWrapper'
 
 const setup = product => {
   const actions = {
@@ -9,7 +9,7 @@ const setup = product => {
   }
 
   const component = shallow(
-    <ProductItem product={product} {...actions} />
+    <ProductWrapper product={product} {...actions} />
   )
 
   return {
@@ -22,7 +22,7 @@ const setup = product => {
 
 let productProps
 
-describe('ProductItem component', () => {
+describe('ProductWrapper component', () => {
   beforeEach(() => {
     productProps = {
       title: 'Product 1',

@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { addToCart } from '../actions'
 import { getVisibleProducts } from '../reducers/products'
-import ProductItem from '../components/ProductItem'
+import ProductWrapper from '../components/ProductWrapper'
 import ProductsList from '../components/ProductsList'
 
 const ProductsContainer = ({ products, addToCart }) => (
   <ProductsList>
     {products.map(product =>
-      <ProductItem
+      <ProductWrapper
         key={product.id}
         product={product}
         onAddToCartClicked={() => addToCart(product.id)} />
