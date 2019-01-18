@@ -1,1 +1,6 @@
 $app-font: Arial, Helvetica, 'sans-serif';
+// Softer color than full on #000
+$text-color-main: black + 40;
+
+// Taken from color-picking sketch spec
+$app-background: rgb(245, 246, 247);

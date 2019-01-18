@@ -3,4 +3,17 @@
 body {
   margin: 0;
   font-family: $app-font;
+  color: $text-color-main;
+  background: $app-background;
+
+  // Basic reset stuff
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    margin: 0;
+    display: inline;
+  }
+  p {
+    margin: 0;
+    display: inline;
+  }
 }
