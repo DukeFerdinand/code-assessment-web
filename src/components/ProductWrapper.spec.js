@@ -38,7 +38,7 @@ describe('ProductWrapper component', () => {
 
   it('should render Add To Cart message', () => {
     const { button } = setup(productProps)
-    expect(button.text()).toMatch(/^Add to cart/)
+    expect(button.text()).toMatch(/^ADD TO CART/)
   })
 
   it('should not disable button', () => {
@@ -59,7 +59,7 @@ describe('ProductWrapper component', () => {
 
     it('should render Sold Out message', () => {
       const { button } = setup(productProps)
-      expect(button.text()).toMatch(/^Sold Out/)
+      expect(button.text()).toMatch(/^SOLD OUT/)
     })
 
     it('should disable button', () => {
