@@ -2,13 +2,23 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Product from './Product'
 
+// Images
+import Chronograph from '../assets/Chronograph.png'
+import Quartz from '../assets/Quartz.png'
+import Weekender from '../assets/Weekender.png'
+import NotFound from '../assets/NotFound.jpg'
+
+// Styles
 import '../styles/components/Product.scss'
+
+// Fake database
+const images = { Chronograph, Quartz, Weekender, NotFound }
 
 const ProductWrapper = ({ product, onAddToCartClicked }) => (
   <div className="product-wrapper">
 
     {/* This would ideally be replaced with a DB stored url */}
-    <img className="product-image" src={`../assets/${product.title}.png`} alt="test"/>
+    <img className="product-image" src={images[product.title] || images.NotFound} alt="test"/>
 
     <div className="product-info-wrapper">
       <div className="product-info">
