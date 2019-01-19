@@ -52,6 +52,11 @@ describe('ProductWrapper component', () => {
     expect(actions.onAddToCartClicked).toBeCalled()
   })
 
+  it('should match snapshot', () => {
+    const { component } = setup(productProps)
+    expect(component).toMatchSnapshot()
+  })
+
   describe('when product inventory is 0', () => {
     beforeEach(() => {
       productProps.inventory = 0

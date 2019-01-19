@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product component should match Product snapshot 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    className="product"
+  >
+    <div
+      className="product-info-upper"
+    >
+      <div
+        className="product-title"
+      >
+        Test Product
+      </div>
+      <div
+        className="product-price"
+      >
+        $
+        9.99
+      </div>
+    </div>
+    <div
+      className="product-availability "
+    >
+      6 REMAINING
+    </div>
+  </div>,
+  "nodes": Array [
+    <div
+      className="product"
+    >
+      <div
+        className="product-info-upper"
+      >
+        <div
+          className="product-title"
+        >
+          Test Product
+        </div>
+        <div
+          className="product-price"
+        >
+          $
+          9.99
+        </div>
+      </div>
+      <div
+        className="product-availability "
+      >
+        6 REMAINING
+      </div>
+    </div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <Product
+        inventory={6}
+        price={9.99}
+        title="Test Product"
+      />,
+      "_debugID": 3,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "inventory": 6,
+          "price": 9.99,
+          "title": "Test Product",
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 2,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          className="product"
+        >
+          <div
+            className="product-info-upper"
+          >
+            <div
+              className="product-title"
+            >
+              Test Product
+            </div>
+            <div
+              className="product-price"
+            >
+              $
+              9.99
+            </div>
+          </div>
+          <div
+            className="product-availability "
+          >
+            6 REMAINING
+          </div>
+        </div>,
+        "_debugID": 4,
+        "_renderedOutput": <div
+          className="product"
+        >
+          <div
+            className="product-info-upper"
+          >
+            <div
+              className="product-title"
+            >
+              Test Product
+            </div>
+            <div
+              className="product-price"
+            >
+              $
+              9.99
+            </div>
+          </div>
+          <div
+            className="product-availability "
+          >
+            6 REMAINING
+          </div>
+        </div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Product
+    inventory={6}
+    price={9.99}
+    title="Test Product"
+  />,
+}
+`;

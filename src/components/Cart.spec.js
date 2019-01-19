@@ -70,4 +70,17 @@ describe('Cart component', () => {
       expect(actions.onCheckoutClicked).toBeCalled()
     })
   })
+
+  it('should match snapshot', () => {
+    const product = [
+      {
+        id: 1,
+        title: 'Product 1',
+        price: 9.99,
+        quantity: 1
+      }
+    ]
+    const { component } = setup('9.99', product)
+    expect(component).toMatchSnapshot()
+  })
 })

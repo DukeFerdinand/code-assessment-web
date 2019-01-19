@@ -23,6 +23,12 @@ describe('Product component', () => {
     expect(price.text()).toBe('$9.99')
   })
 
+  it('should match Product snapshot', () => {
+    const { component } = setup({ title: 'Test Product', price: 9.99, inventory: 6 })
+
+    expect(component).toMatchSnapshot()
+  })
+
   describe('when given inventory', () => {
     it('should render title, price, and inventory', () => {
       const { title, price, availability } = setup({ title: 'Test Product', price: 9.99, inventory: 6 })

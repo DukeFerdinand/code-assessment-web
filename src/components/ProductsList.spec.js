@@ -18,4 +18,8 @@ describe('ProductsList component', () => {
     const { children } = setup({ children: 'Test Children' })
     expect(children.text()).toMatch(/^Test Children$/)
   })
+  it('should match snapshot', () => {
+    const { component } = setup({ children: 'Test Children' })
+    expect(component).toMatchSnapshot()
+  })
 })

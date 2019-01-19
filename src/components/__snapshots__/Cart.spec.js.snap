@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart component should match snapshot 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div>
+    <h3>
+      Your Cart
+    </h3>
+    <div>
+      <Product
+        price={9.99}
+        quantity={1}
+        title="Product 1"
+      />
+    </div>
+    <p>
+      Total: $
+      9.99
+    </p>
+    <button
+      disabled=""
+      onClick={[MockFunction]}
+    >
+      Checkout
+    </button>
+  </div>,
+  "nodes": Array [
+    <div>
+      <h3>
+        Your Cart
+      </h3>
+      <div>
+        <Product
+          price={9.99}
+          quantity={1}
+          title="Product 1"
+        />
+      </div>
+      <p>
+        Total: $
+        9.99
+      </p>
+      <button
+        disabled=""
+        onClick={[MockFunction]}
+      >
+        Checkout
+      </button>
+    </div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <Cart
+        onCheckoutClicked={[MockFunction]}
+        products={
+          Array [
+            Object {
+              "id": 1,
+              "price": 9.99,
+              "quantity": 1,
+              "title": "Product 1",
+            },
+          ]
+        }
+        total="9.99"
+      />,
+      "_debugID": 13,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "onCheckoutClicked": [MockFunction],
+          "products": Array [
+            Object {
+              "id": 1,
+              "price": 9.99,
+              "quantity": 1,
+              "title": "Product 1",
+            },
+          ],
+          "total": "9.99",
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 7,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div>
+          <h3>
+            Your Cart
+          </h3>
+          <div>
+            <Product
+              price={9.99}
+              quantity={1}
+              title="Product 1"
+            />
+          </div>
+          <p>
+            Total: $
+            9.99
+          </p>
+          <button
+            disabled=""
+            onClick={[MockFunction]}
+          >
+            Checkout
+          </button>
+        </div>,
+        "_debugID": 14,
+        "_renderedOutput": <div>
+          <h3>
+            Your Cart
+          </h3>
+          <div>
+            <Product
+              price={9.99}
+              quantity={1}
+              title="Product 1"
+            />
+          </div>
+          <p>
+            Total: $
+            9.99
+          </p>
+          <button
+            disabled=""
+            onClick={[MockFunction]}
+          >
+            Checkout
+          </button>
+        </div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Cart
+    onCheckoutClicked={[MockFunction]}
+    products={
+      Array [
+        Object {
+          "id": 1,
+          "price": 9.99,
+          "quantity": 1,
+          "title": "Product 1",
+        },
+      ]
+    }
+    total="9.99"
+  />,
+}
+`;
