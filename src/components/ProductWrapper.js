@@ -6,17 +6,23 @@ import '../styles/components/Product.scss'
 
 const ProductWrapper = ({ product, onAddToCartClicked }) => (
   <div className="product-wrapper">
-    <div className="product-image"></div>
-    <div className="product-info">
-      <Product
-        title={product.title}
-        price={product.price}
-        inventory={product.inventory} />
-      <button
-        onClick={onAddToCartClicked}
-        disabled={product.inventory > 0 ? '' : 'disabled'}>
-        {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
-      </button>
+
+    {/* This would ideally be replaced with a DB stored url */}
+    <img className="product-image" src={`../assets/${product.title}.png`} alt="test"/>
+
+    <div className="product-info-wrapper">
+      <div className="product-info">
+        <Product
+          title={product.title}
+          price={product.price}
+          inventory={product.inventory} />
+        <button
+          className="product-action"
+          onClick={onAddToCartClicked}
+          disabled={product.inventory > 0 ? '' : 'disabled'}>
+          {product.inventory > 0 ? 'ADD TO CART' : 'SOLD OUT'}
+        </button>
+      </div>
     </div>
   </div>
 )
