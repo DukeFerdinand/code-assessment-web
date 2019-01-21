@@ -28,3 +28,13 @@ export const getCartProducts = state =>
     ...getProduct(state, id),
     quantity: getQuantity(state, id)
   }))
+
+// Convenience function for returning number of items in cart
+export const getItemCount = state => {
+  const products = getCartProducts(state)
+  let itemCount = 0
+  products.forEach(product => {
+    itemCount += product.quantity
+  });
+  return itemCount
+}
