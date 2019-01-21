@@ -43,11 +43,18 @@ const Cart  = ({ products, total, onCloseCartClicked, onCheckoutClicked }) => {
       <h3 className="cart-title">Your Cart</h3>
       <hr className="divider" />
       <div className="cart-content">{nodes}</div>
-      <p>Total: &#36;{total}</p>
-      <button onClick={onCheckoutClicked}
-        disabled={hasProducts ? '' : 'disabled'}>
-        Checkout
-      </button>
+      {
+        hasProducts ?
+          (
+            <span className="checkout-wrapper">
+              <p className="checkout-total">Total: &#36;{total}</p>
+              <button onClick={onCheckoutClicked}
+                disabled={hasProducts ? '' : 'disabled'}>
+                Checkout
+              </button>
+            </span>
+          ) : null
+      }
     </div>
   )
 }
