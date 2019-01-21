@@ -10,11 +10,7 @@ const CartContainer = ({ products, total, modalOpen, checkout, toggleModal }) =>
     <Cart
       products={products}
       total={total}
-      onCloseCartClicked={() => {
-        console.log('closing')
-        console.log(toggleModal)
-        toggleModal()
-      }}
+      onCloseCartClicked={toggleModal}
       onCheckoutClicked={() => checkout(products)} />
   </div>
 )
