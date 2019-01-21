@@ -2,6 +2,8 @@ $app-font: Arial, Helvetica, 'sans-serif';
 // Softer color than full on #000
 $text-color-main: black + 40;
 $text-color-secondary: darkgray + 15;
+// Taken from cart scene in sketch
+$text-color-background: #BDBDBD;
 
 // Colors
 $color-primary: rgb(82,148,212);
@@ -10,3 +12,11 @@ $color-primary-disabled: rgba(82,148,212, .5);
 
 // Taken from color-picking sketch spec
 $app-background: rgb(245, 246, 247);
+
+%divider {
+  height: 0;
+  // Resets the border so we don't have to clear everything
+  border: none;
+  border-top: 1.75px solid;
+  border-color: black + 220;
+}

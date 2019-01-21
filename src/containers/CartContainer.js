@@ -6,10 +6,12 @@ import { getTotal, getCartProducts } from '../reducers'
 import Cart from '../components/Cart'
 
 const CartContainer = ({ products, total, checkout }) => (
-  <Cart
-    products={products}
-    total={total}
-    onCheckoutClicked={() => checkout(products)} />
+  <div className="cart-wrapper">
+    <Cart
+      products={products}
+      total={total}
+      onCheckoutClicked={() => checkout(products)} />
+  </div>
 )
 
 CartContainer.propTypes = {
