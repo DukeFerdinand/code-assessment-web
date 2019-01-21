@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactSvg from 'react-svg'
 
 // Custom component imports. Separating these from npm imports helps readability
 import AppUpper from '../components/AppUpper'

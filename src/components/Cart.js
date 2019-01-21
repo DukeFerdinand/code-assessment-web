@@ -8,7 +8,7 @@ import CartIcon from '../assets/cart.svg'
 
 import '../styles/components/Cart.scss'
 
-const Cart  = ({ products, total, onCheckoutClicked }) => {
+const Cart  = ({ products, total, onCloseCartClicked, onCheckoutClicked }) => {
   const hasProducts = products.length > 0
   const nodes = hasProducts ? (
     products.map(product =>
@@ -21,24 +21,22 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
     )
   ) : (
     <div className="cart-empty-message">
-      <p className="cart-empty-text">
+      <span className="cart-empty-text">
         <ReactSVG
           src={CartIcon}
           className="cart-empty-icon-wrapper"
           svgClassName="cart-empty-icon"
         />
         Please add some products to your cart
-      </p>
+      </span>
     </div>
   )
 
   return (
     <div className="cart-container">
       <ReactSVG
-        onClick={() => {
-          alert('close modal')
-        }}
         src={CloseIcon}
+        onClick={onCloseCartClicked}
         className="cart-close-wrapper"
         svgClassName="cart-close-icon"
       />
@@ -57,7 +55,8 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
 Cart.propTypes = {
   products: PropTypes.array,
   total: PropTypes.string,
-  onCheckoutClicked: PropTypes.func
+  onCheckoutClicked: PropTypes.func,
+  onCloseCartClicked: PropTypes.func
 }
 
 export default Cart

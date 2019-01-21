@@ -1,15 +1,19 @@
 import { combineReducers } from 'redux'
 import cart, * as fromCart from './cart'
 import products, * as fromProducts from './products'
+import ui, * as fromUI from './ui'
 
 export default combineReducers({
   cart,
-  products
+  products,
+  ui
 })
 
 const getAddedIds = state => fromCart.getAddedIds(state.cart)
 const getQuantity = (state, id) => fromCart.getQuantity(state.cart, id)
 const getProduct = (state, id) => fromProducts.getProduct(state.products, id)
+
+export const getModalStatus = state => fromUI.getModalStatus(state.ui)
 
 export const getTotal = state =>
   getAddedIds(state)

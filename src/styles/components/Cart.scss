@@ -1,5 +1,9 @@
 @import '../shared';
 
+.display-cart {
+  display: initial !important;
+}
+
 .cart-wrapper {
   background: rgba(20, 20, 20, .5);
   height: 100vh;
@@ -10,6 +14,8 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
+
+  display: none;
   .cart-container {
     z-index: 3;
     width: 100%;
