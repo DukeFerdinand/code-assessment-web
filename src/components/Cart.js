@@ -27,7 +27,7 @@ const Cart  = ({ products, total, onCloseCartClicked, onCheckoutClicked }) => {
           className="cart-empty-icon-wrapper"
           svgClassName="cart-empty-icon"
         />
-        Please add some products to your cart
+        Please add some products to your cart.
       </span>
     </div>
   )

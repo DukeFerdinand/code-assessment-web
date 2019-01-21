@@ -8,11 +8,32 @@ ShallowWrapper {
     "findWhereUnwrapped": [Function],
   },
   "length": 1,
-  "node": <div>
-    <h3>
+  "node": <div
+    className="cart-container"
+  >
+    <ReactSVG
+      className="cart-close-wrapper"
+      evalScripts="never"
+      fallback={null}
+      loading={null}
+      onInjected={[Function]}
+      renumerateIRIElements={true}
+      src="close.svg"
+      svgClassName="cart-close-icon"
+      svgStyle={Object {}}
+      wrapper="div"
+    />
+    <h3
+      className="cart-title"
+    >
       Your Cart
     </h3>
-    <div>
+    <hr
+      className="divider"
+    />
+    <div
+      className="cart-content"
+    >
       <Product
         price={9.99}
         quantity={1}
@@ -31,11 +52,32 @@ ShallowWrapper {
     </button>
   </div>,
   "nodes": Array [
-    <div>
-      <h3>
+    <div
+      className="cart-container"
+    >
+      <ReactSVG
+        className="cart-close-wrapper"
+        evalScripts="never"
+        fallback={null}
+        loading={null}
+        onInjected={[Function]}
+        renumerateIRIElements={true}
+        src="close.svg"
+        svgClassName="cart-close-icon"
+        svgStyle={Object {}}
+        wrapper="div"
+      />
+      <h3
+        className="cart-title"
+      >
         Your Cart
       </h3>
-      <div>
+      <hr
+        className="divider"
+      />
+      <div
+        className="cart-content"
+      >
         <Product
           price={9.99}
           quantity={1}
@@ -112,11 +154,32 @@ ShallowWrapper {
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <div>
-          <h3>
+        "_currentElement": <div
+          className="cart-container"
+        >
+          <ReactSVG
+            className="cart-close-wrapper"
+            evalScripts="never"
+            fallback={null}
+            loading={null}
+            onInjected={[Function]}
+            renumerateIRIElements={true}
+            src="close.svg"
+            svgClassName="cart-close-icon"
+            svgStyle={Object {}}
+            wrapper="div"
+          />
+          <h3
+            className="cart-title"
+          >
             Your Cart
           </h3>
-          <div>
+          <hr
+            className="divider"
+          />
+          <div
+            className="cart-content"
+          >
             <Product
               price={9.99}
               quantity={1}
@@ -135,11 +198,32 @@ ShallowWrapper {
           </button>
         </div>,
         "_debugID": 14,
-        "_renderedOutput": <div>
-          <h3>
+        "_renderedOutput": <div
+          className="cart-container"
+        >
+          <ReactSVG
+            className="cart-close-wrapper"
+            evalScripts="never"
+            fallback={null}
+            loading={null}
+            onInjected={[Function]}
+            renumerateIRIElements={true}
+            src="close.svg"
+            svgClassName="cart-close-icon"
+            svgStyle={Object {}}
+            wrapper="div"
+          />
+          <h3
+            className="cart-title"
+          >
             Your Cart
           </h3>
-          <div>
+          <hr
+            className="divider"
+          />
+          <div
+            className="cart-content"
+          >
             <Product
               price={9.99}
               quantity={1}
