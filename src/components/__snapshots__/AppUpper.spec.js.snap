@@ -32,7 +32,9 @@ ShallowWrapper {
         svgStyle={Object {}}
         wrapper="span"
       />
-      <p>
+      <p
+        className="cart-link-text"
+      >
         Your cart is empty
       </p>
     </span>
@@ -62,7 +64,9 @@ ShallowWrapper {
           svgStyle={Object {}}
           wrapper="span"
         />
-        <p>
+        <p
+          className="cart-link-text"
+        >
           Your cart is empty
         </p>
       </span>
@@ -75,18 +79,22 @@ ShallowWrapper {
       "_compositeType": 2,
       "_context": Object {},
       "_currentElement": <AppUpper
+        itemCount={0}
         title="App Title"
         toggleModal={[MockFunction]}
+        total={0}
       />,
-      "_debugID": 3,
+      "_debugID": 11,
       "_hostContainerInfo": null,
       "_hostParent": null,
       "_instance": StatelessComponent {
         "_reactInternalInstance": [Circular],
         "context": Object {},
         "props": Object {
+          "itemCount": 0,
           "title": "App Title",
           "toggleModal": [MockFunction],
+          "total": 0,
         },
         "refs": Object {},
         "state": null,
@@ -101,7 +109,7 @@ ShallowWrapper {
           "validateCallback": [Function],
         },
       },
-      "_mountOrder": 2,
+      "_mountOrder": 6,
       "_pendingCallbacks": null,
       "_pendingElement": null,
       "_pendingForceUpdate": false,
@@ -132,12 +140,14 @@ ShallowWrapper {
               svgStyle={Object {}}
               wrapper="span"
             />
-            <p>
+            <p
+              className="cart-link-text"
+            >
               Your cart is empty
             </p>
           </span>
         </div>,
-        "_debugID": 4,
+        "_debugID": 12,
         "_renderedOutput": <div
           className="app-title-wrapper"
         >
@@ -162,7 +172,9 @@ ShallowWrapper {
               svgStyle={Object {}}
               wrapper="span"
             />
-            <p>
+            <p
+              className="cart-link-text"
+            >
               Your cart is empty
             </p>
           </span>
@@ -179,8 +191,10 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <AppUpper
+    itemCount={0}
     title="App Title"
     toggleModal={[MockFunction]}
+    total={0}
   />,
 }
 `;

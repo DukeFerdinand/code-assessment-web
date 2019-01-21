@@ -15,28 +15,26 @@ const setup = (total, products = []) => {
   return {
     component: component,
     actions: actions,
-    button: component.find('button'),
+    button: component.find('button') || null,
     products: component.find(Product),
     emptyText: component.find('span.cart-empty-text'),
-    p: component.find('p')
+    p: component.find('p.checkout-total')
   }
 }
 
 describe('Cart component', () => {
-  it('should display total', () => {
-    const { p } = setup('76')
-    expect(p.text()).toMatch(/^Total: \$76/)
-  })
 
-  it('should display add some products message', () => {
-    const { emptyText } = setup()
-    expect(emptyText.text()).toMatch(/<ReactSVG \/>Please add some products to your cart./)
-  })
+  describe('when not given a total or products', () => {
+    it('should display add some products message', () => {
+      const { emptyText } = setup()
+      expect(emptyText.text()).toMatch(/<ReactSVG \/>Please add some products to your cart./)
+    })
 
-  it('should disable button', () => {
-    const { button } = setup()
-    expect(button.prop('disabled')).toEqual('disabled')
-  })
+    it('should not display checkout button', () => {
+      const { button } = setup()
+      expect(button.length).toEqual(0)
+    })
+  });
 
   describe('when given product', () => {
     const product = [
@@ -47,6 +45,10 @@ describe('Cart component', () => {
         quantity: 1
       }
     ]
+    it('should display total', () => {
+      const { p } = setup('76', product)
+      expect(p.text()).toMatch(/^Total: \$76/)
+    })
 
     it('should render products', () => {
       const { products } = setup('9.99', product)
