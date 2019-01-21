@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ReactSVG from  'react-svg'
 import { connect } from 'react-redux'
 
@@ -6,7 +7,7 @@ import { getTotal  } from '../reducers'
 import { toggleModal } from '../actions'
 import CartIcon from '../assets/cart.svg'
 
-const AppUpper = ({ title, toggleModal }) => {
+export const AppUpper = ({ title, toggleModal }) => {
   return (
     <div className="app-title-wrapper">
       <h2 className="app-title">{title}</h2>
@@ -23,6 +24,11 @@ const AppUpper = ({ title, toggleModal }) => {
       </span>
     </div>
   )
+}
+
+AppUpper.PropTypes = {
+  title: PropTypes.string.isRequired,
+  toggleModal: PropTypes.func
 }
 
 const mapStateToProps = (state) => {
