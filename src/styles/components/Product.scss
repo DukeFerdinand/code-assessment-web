@@ -2,16 +2,24 @@
 
 .product-wrapper {
   width: 100%;
-  // max-width: 
   height: 275px;
   display: flex;
   margin: 30px auto;
+
+  @media (max-width: $tablet) {
+    height: 175px;
+    margin: 20px auto;
+  }
   .product-image {
-    flex: .60;
+    flex: .25;
     background: black + 200;
-    width: 50px;
     height: 100%;
     border-radius: 10px 0 0 10px;
+
+    @media (max-width: $tablet) {
+      max-width: 272px;
+      border-radius: 5px 0 0 5px;
+    }
   }
   .product-info-wrapper {
     flex: 1;
@@ -20,6 +28,10 @@
     .product-info {
       padding: 30px 60px;
 
+      @media (max-width: $tablet) {
+        padding: 20px 20px 20px 40px;
+      }
+
       .product-info-upper {
         display: flex;
         justify-content: space-between;
@@ -27,11 +39,20 @@
         .product-title {
           font-size: 2.5em;
           color: $text-color-main;
+
+          @media (max-width: $tablet) {
+            font-size: 1.5em;
+          }
         }
         .product-price {
           font-size: 1.3em;
           position: relative;
           top: 10px;
+
+          @media (max-width: $tablet) {
+            font-size: 1.1em;
+            top: 5px;
+          }
         }
       }
       .product-availability {
@@ -40,6 +61,10 @@
         color: $text-color-secondary;
         &.out-of-stock {
           color: #e74c3c;
+        }
+
+        @media (max-width: $tablet) {
+          font-size: .75em;
         }
       }
       .product-action {
@@ -61,6 +86,10 @@
         &:disabled {
           cursor: initial;
           background: $color-primary-disabled;
+        }
+
+        @media (max-width: $tablet) {
+          bottom: -20px;
         }
       }
     }
@@ -103,9 +132,6 @@
       display: flex;
       margin: 10px auto 0 auto;
       border-radius: 60px;
-      @media (max-width: 900px) {
-        flex-direction: column;
-      }
 
       %quantity-button {
         //TODO: Re-implement this once the cart buttons work

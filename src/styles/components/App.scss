@@ -6,12 +6,21 @@
   box-sizing: border-box;
   margin: 0 auto;
   padding: 30px 50px;
+
+  // Tablets
+  @media (max-width: $tablet) {
+    max-width: 700px;
+    padding: 35px 50px;
+  }
   .app-title-wrapper {
     width: 100%;
     display: flex;
     justify-content: space-between;
     .app-title {
       font-size: 3em;
+      @media (max-width: $tablet) {
+        font-size: 2.5em;
+      }
     }
     .cart-link {
       width: auto;
@@ -19,7 +28,9 @@
       height: 1.1em;
       text-align: right;
       padding-right: 20px;
-
+      @media (max-width: $tablet) {
+        height: .9em;
+      }
       &:hover {
         cursor: pointer;
         color: $color-primary;
@@ -30,6 +41,14 @@
       }
       .cart-icon {
         margin-right: 8px;
+        @media (max-width: $tablet) {
+          margin-right: 4px;
+        }
+      }
+      // cart-link
+      @media (max-width: $tablet) {
+        margin-top: 10px;
+        font-size: .90em;
       }
     }
   }
