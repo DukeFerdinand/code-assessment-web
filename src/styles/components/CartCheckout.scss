@@ -1,0 +1,46 @@
+@import '../shared';
+
+.checkout-wrapper {
+  // background: red;
+  // display: flex;
+  // flex-direction: column;
+  .checkout-row {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+
+    // @media (min-width: $desktop) {
+    //   background: red;
+    // }
+
+    .checkout-row-title {
+      color: $text-color-secondary - 20;
+    }
+    .checout-row-price {
+
+    }
+
+    &.checkout-row-final {
+      margin: 0;
+    }
+
+  }
+  .checkout-button {
+    // position: relative;
+    // left: 0;
+    // right: 0;
+    font-size: .90em;
+    background: $button-primary;
+    cursor: pointer;
+    color: white;
+    width: 130px;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 25px;
+
+    &:hover, &:focus {
+      background: $button-primary-hover
+    }
+  }
+}

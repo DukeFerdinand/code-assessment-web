@@ -1,8 +1,9 @@
 import React from 'react'
+import ReactSVG from 'react-svg'
 import PropTypes from 'prop-types'
 import Product from './Product'
+import CartCheckout from './CartCheckout'
 
-import ReactSVG from 'react-svg'
 import CloseIcon from '../assets/close.svg'
 import CartIcon from '../assets/cart.svg'
 
@@ -13,6 +14,7 @@ const Cart  = ({ products, total, onCloseCartClicked, onCheckoutClicked }) => {
   const nodes = hasProducts ? (
     products.map(product =>
       <Product
+        inCart={true}
         title={product.title}
         price={product.price}
         quantity={product.quantity}
@@ -42,19 +44,18 @@ const Cart  = ({ products, total, onCloseCartClicked, onCheckoutClicked }) => {
       />
       <h3 className="cart-title">Your Cart</h3>
       <hr className="divider" />
-      <div className="cart-content">{nodes}</div>
-      {
-        hasProducts ?
-          (
-            <span className="checkout-wrapper">
-              <p className="checkout-total">Total: &#36;{total}</p>
-              <button onClick={onCheckoutClicked}
-                disabled={hasProducts ? '' : 'disabled'}>
-                Checkout
-              </button>
-            </span>
-          ) : null
-      }
+      <div className="cart-content-wrapper">
+        <div className="cart-content">{nodes}</div>
+        {
+          hasProducts ?
+            (
+              <CartCheckout
+                total={total}
+                onCheckoutClicked={onCheckoutClicked}
+              />
+            ) : null
+        }
+      </div>
     </div>
   )
 }

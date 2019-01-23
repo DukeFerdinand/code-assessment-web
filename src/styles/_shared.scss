@@ -9,6 +9,11 @@ $text-color-background: #BDBDBD;
 $color-primary: rgb(82,148,212);
 $color-primary-disabled: rgba(82,148,212, .5);
 
+// Buttons
+$button-primary: $color-primary;
+$button-primary-hover: rgb(50,123,195);
+$button-secondary: rgb(245,245,245);
+$button-secondary-disabled: rgba(245,245,245, .5);
 
 // Taken from color-picking sketch spec
 $app-background: rgb(245, 246, 247);
@@ -20,3 +25,7 @@ $app-background: rgb(245, 246, 247);
   border-top: 1.75px solid;
   border-color: black + 220;
 }
+
+// Breakpoints
+
+$desktop: 1280px;
