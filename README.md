@@ -22,7 +22,9 @@ Please also update this README file: we'd love to see notes on your decision-mak
 
 ## Doug's Dev Notes
 
-#### [Build Log 0](/build-logs/build-log-0.md#serving-note) - Finished 1280 layout
+#### [Build Log 0](/build-logs/build-log-0.md) - Finished 1280 layout
+
+#### [Build Log 1](/build-logs/build-log-1.md) - Finished cart layout
 
 ## To Build
 Run `npm run build` or `yarn build`. See [Build Log 0](/build-logs/build-log-0.md) for notes on serving
