@@ -17,9 +17,6 @@
     .checkout-row-title {
       color: $text-color-secondary - 20;
     }
-    .checout-row-price {
-
-    }
 
     &.checkout-row-final {
       margin: 0;
@@ -38,6 +35,17 @@
     padding: 10px;
     margin: 0 auto;
     border-radius: 25px;
+
+    @media (max-width: $mobile) {
+      position: fixed;
+      height: 45px;
+      font-size: 1.2em;
+      width: 100vw;
+      z-index: 5;
+      bottom: 0;
+      left: 0;
+      border-radius: 0;
+    }
 
     &:hover, &:focus {
       background: $button-primary-hover

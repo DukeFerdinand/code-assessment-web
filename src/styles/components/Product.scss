@@ -11,6 +11,11 @@
     max-height: 175px;
     margin: 20px auto;
   }
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    max-height: initial;
+    max-width: 350px;
+  }
   .product-image {
     flex: .8;
     background: black + 200;
@@ -24,11 +29,21 @@
       max-height: 175px;
       border-radius: 5px 0 0 5px;
     }
+
+    @media (max-width: $mobile) {
+      max-width: 350px;
+      max-height: 250px;
+      border-radius: 10px 10px 0 0;
+    }
   }
   .product-info-wrapper {
     flex: 1;
     border-radius: 0 8px 8px 0;
     background: white;
+
+    @media (max-width: $mobile) {
+      border-radius: 0 0 10px 10px;
+    }
     .product-info {
       box-sizing: border-box;
       height: 100%;
@@ -113,7 +128,9 @@
     margin-bottom: 25px;
     .product-image-wrapper {
       width: 150px;
-      // height: 125px;
+        @media (max-width: $mobile) {
+          width: 125px;
+        }
       .product-image {
         width: 100%;
       }
@@ -121,7 +138,12 @@
     .product-info-upper {
       height: 100px;
       margin-left: 10px;
-      position: relative;
+      position: relative; // Needed to position product removal link
+
+      @media (max-width: $mobile) {
+        height: 90px;
+      }
+
       .product-title {
         font-size: 1.25em;
       }

@@ -20,6 +20,9 @@
     @media (max-width: $tablet) {
       margin-bottom: 20px;
     }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
     .app-title {
       font-size: 3em;
       @media (max-width: $tablet) {
@@ -34,6 +37,9 @@
       padding-right: 20px;
       @media (max-width: $tablet) {
         height: .9em;
+      }
+      @media (max-width: $mobile) {
+        text-align: left;
       }
       &:hover {
         cursor: pointer;
