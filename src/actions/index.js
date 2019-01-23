@@ -40,7 +40,6 @@ export const checkout = products => (dispatch, getState) => {
 }
 
 export const toggleModal = () => (dispatch, getState) => {
-  console.log('calling')
   const { ui } = getState()
   dispatch({
     type: types.TOGGLE_CART_MODAL,
