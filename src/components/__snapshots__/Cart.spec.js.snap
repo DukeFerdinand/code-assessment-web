@@ -8,50 +8,90 @@ ShallowWrapper {
     "findWhereUnwrapped": [Function],
   },
   "length": 1,
-  "node": <div>
-    <h3>
+  "node": <div
+    className="cart-container"
+  >
+    <ReactSVG
+      className="cart-close-wrapper"
+      evalScripts="never"
+      fallback={null}
+      loading={null}
+      onInjected={[Function]}
+      renumerateIRIElements={true}
+      src="close.svg"
+      svgClassName="cart-close-icon"
+      svgStyle={Object {}}
+      wrapper="div"
+    />
+    <h3
+      className="cart-title"
+    >
       Your Cart
     </h3>
-    <div>
-      <Product
-        price={9.99}
-        quantity={1}
-        title="Product 1"
-      />
-    </div>
-    <p>
-      Total: $
-      9.99
-    </p>
-    <button
-      disabled=""
-      onClick={[MockFunction]}
+    <hr
+      className="divider"
+    />
+    <div
+      className="cart-content-wrapper"
     >
-      Checkout
-    </button>
-  </div>,
-  "nodes": Array [
-    <div>
-      <h3>
-        Your Cart
-      </h3>
-      <div>
+      <div
+        className="cart-content"
+      >
         <Product
+          inCart={true}
           price={9.99}
           quantity={1}
           title="Product 1"
         />
       </div>
-      <p>
-        Total: $
-        9.99
-      </p>
-      <button
-        disabled=""
-        onClick={[MockFunction]}
+      <CartCheckout
+        onCheckoutClicked={[MockFunction]}
+        total="9.99"
+      />
+    </div>
+  </div>,
+  "nodes": Array [
+    <div
+      className="cart-container"
+    >
+      <ReactSVG
+        className="cart-close-wrapper"
+        evalScripts="never"
+        fallback={null}
+        loading={null}
+        onInjected={[Function]}
+        renumerateIRIElements={true}
+        src="close.svg"
+        svgClassName="cart-close-icon"
+        svgStyle={Object {}}
+        wrapper="div"
+      />
+      <h3
+        className="cart-title"
       >
-        Checkout
-      </button>
+        Your Cart
+      </h3>
+      <hr
+        className="divider"
+      />
+      <div
+        className="cart-content-wrapper"
+      >
+        <div
+          className="cart-content"
+        >
+          <Product
+            inCart={true}
+            price={9.99}
+            quantity={1}
+            title="Product 1"
+          />
+        </div>
+        <CartCheckout
+          onCheckoutClicked={[MockFunction]}
+          total="9.99"
+        />
+      </div>
     </div>,
   ],
   "options": Object {},
@@ -74,7 +114,7 @@ ShallowWrapper {
         }
         total="9.99"
       />,
-      "_debugID": 13,
+      "_debugID": 9,
       "_hostContainerInfo": null,
       "_hostParent": null,
       "_instance": StatelessComponent {
@@ -105,57 +145,97 @@ ShallowWrapper {
           "validateCallback": [Function],
         },
       },
-      "_mountOrder": 7,
+      "_mountOrder": 5,
       "_pendingCallbacks": null,
       "_pendingElement": null,
       "_pendingForceUpdate": false,
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <div>
-          <h3>
+        "_currentElement": <div
+          className="cart-container"
+        >
+          <ReactSVG
+            className="cart-close-wrapper"
+            evalScripts="never"
+            fallback={null}
+            loading={null}
+            onInjected={[Function]}
+            renumerateIRIElements={true}
+            src="close.svg"
+            svgClassName="cart-close-icon"
+            svgStyle={Object {}}
+            wrapper="div"
+          />
+          <h3
+            className="cart-title"
+          >
             Your Cart
           </h3>
-          <div>
-            <Product
-              price={9.99}
-              quantity={1}
-              title="Product 1"
+          <hr
+            className="divider"
+          />
+          <div
+            className="cart-content-wrapper"
+          >
+            <div
+              className="cart-content"
+            >
+              <Product
+                inCart={true}
+                price={9.99}
+                quantity={1}
+                title="Product 1"
+              />
+            </div>
+            <CartCheckout
+              onCheckoutClicked={[MockFunction]}
+              total="9.99"
             />
           </div>
-          <p>
-            Total: $
-            9.99
-          </p>
-          <button
-            disabled=""
-            onClick={[MockFunction]}
-          >
-            Checkout
-          </button>
         </div>,
-        "_debugID": 14,
-        "_renderedOutput": <div>
-          <h3>
+        "_debugID": 10,
+        "_renderedOutput": <div
+          className="cart-container"
+        >
+          <ReactSVG
+            className="cart-close-wrapper"
+            evalScripts="never"
+            fallback={null}
+            loading={null}
+            onInjected={[Function]}
+            renumerateIRIElements={true}
+            src="close.svg"
+            svgClassName="cart-close-icon"
+            svgStyle={Object {}}
+            wrapper="div"
+          />
+          <h3
+            className="cart-title"
+          >
             Your Cart
           </h3>
-          <div>
-            <Product
-              price={9.99}
-              quantity={1}
-              title="Product 1"
+          <hr
+            className="divider"
+          />
+          <div
+            className="cart-content-wrapper"
+          >
+            <div
+              className="cart-content"
+            >
+              <Product
+                inCart={true}
+                price={9.99}
+                quantity={1}
+                title="Product 1"
+              />
+            </div>
+            <CartCheckout
+              onCheckoutClicked={[MockFunction]}
+              total="9.99"
             />
           </div>
-          <p>
-            Total: $
-            9.99
-          </p>
-          <button
-            disabled=""
-            onClick={[MockFunction]}
-          >
-            Checkout
-          </button>
         </div>,
       },
       "_renderedNodeType": 0,

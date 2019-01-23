@@ -1,4 +1,7 @@
 import React from 'react'
+
+// Custom component imports. Separating these from npm imports helps readability
+import AppUpper from '../components/AppUpper'
 import ProductsContainer from './ProductsContainer'
 import CartContainer from './CartContainer'
 
@@ -10,10 +13,9 @@ import '../styles/components/App.scss'
 
 const App = () => (
   <div className="app-container">
-    <h2 className="app-title">Acme Store</h2>
+    <AppUpper title="Acme Store" />
     <hr className="divider"/>
     <ProductsContainer />
-    <hr/>
     <CartContainer />
   </div>
 )

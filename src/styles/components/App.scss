@@ -1,10 +1,37 @@
+@import '../shared';
+
 .app-container {
   width: 100%;
   max-width: 1200px;
+  box-sizing: border-box;
   margin: 0 auto;
-  padding: 40px 0;
-  .app-title {
-    font-size: 3em;
+  padding: 30px 50px;
+  .app-title-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .app-title {
+      font-size: 3em;
+    }
+    .cart-link {
+      width: auto;
+      min-width: 150px;
+      height: 1.1em;
+      text-align: right;
+      padding-right: 20px;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-primary;
+        * {
+          fill: $color-primary
+        }
+        // border-bottom: 1px solid black;
+      }
+      .cart-icon {
+        margin-right: 8px;
+      }
+    }
   }
   .divider {
     height: 0;

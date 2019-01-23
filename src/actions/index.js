@@ -38,3 +38,11 @@ export const checkout = products => (dispatch, getState) => {
     // dispatch({ type: types.CHECKOUT_FAILURE, cart })
   })
 }
+
+export const toggleModal = () => (dispatch, getState) => {
+  const { ui } = getState()
+  dispatch({
+    type: types.TOGGLE_CART_MODAL,
+    modalOpen: !ui.modalOpen
+  })
+}
