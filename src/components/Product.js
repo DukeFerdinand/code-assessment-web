@@ -4,7 +4,6 @@ import ReactSVG from 'react-svg'
 
 import images from '../assets/images'
 import icons from '../assets/icons/index'
-import products from '../reducers/products';
 
 const Product = ({ price, inventory, title, quantity, inCart }) => (
   <div className="product">
@@ -13,7 +12,7 @@ const Product = ({ price, inventory, title, quantity, inCart }) => (
         // Again as before, these images should be fed from a Database,
         // but that's outside the scope of this project
         <span className="product-image-wrapper">
-          <img className="product-image" src={images.thumbnails[`${title}Thumb`] || images.NotFound} />
+          <img alt={title} className="product-image" src={images.thumbnails[`${title}Thumb`] || images.NotFound} />
         </span>
       ) : null
     }
