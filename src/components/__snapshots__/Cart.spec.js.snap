@@ -32,30 +32,23 @@ ShallowWrapper {
       className="divider"
     />
     <div
-      className="cart-content"
+      className="cart-content-wrapper"
     >
-      <Product
-        price={9.99}
-        quantity={1}
-        title="Product 1"
+      <div
+        className="cart-content"
+      >
+        <Product
+          inCart={true}
+          price={9.99}
+          quantity={1}
+          title="Product 1"
+        />
+      </div>
+      <CartCheckout
+        onCheckoutClicked={[MockFunction]}
+        total="9.99"
       />
     </div>
-    <span
-      className="checkout-wrapper"
-    >
-      <p
-        className="checkout-total"
-      >
-        Total: $
-        9.99
-      </p>
-      <button
-        disabled=""
-        onClick={[MockFunction]}
-      >
-        Checkout
-      </button>
-    </span>
   </div>,
   "nodes": Array [
     <div
@@ -82,30 +75,23 @@ ShallowWrapper {
         className="divider"
       />
       <div
-        className="cart-content"
+        className="cart-content-wrapper"
       >
-        <Product
-          price={9.99}
-          quantity={1}
-          title="Product 1"
+        <div
+          className="cart-content"
+        >
+          <Product
+            inCart={true}
+            price={9.99}
+            quantity={1}
+            title="Product 1"
+          />
+        </div>
+        <CartCheckout
+          onCheckoutClicked={[MockFunction]}
+          total="9.99"
         />
       </div>
-      <span
-        className="checkout-wrapper"
-      >
-        <p
-          className="checkout-total"
-        >
-          Total: $
-          9.99
-        </p>
-        <button
-          disabled=""
-          onClick={[MockFunction]}
-        >
-          Checkout
-        </button>
-      </span>
     </div>,
   ],
   "options": Object {},
@@ -128,7 +114,7 @@ ShallowWrapper {
         }
         total="9.99"
       />,
-      "_debugID": 13,
+      "_debugID": 9,
       "_hostContainerInfo": null,
       "_hostParent": null,
       "_instance": StatelessComponent {
@@ -159,7 +145,7 @@ ShallowWrapper {
           "validateCallback": [Function],
         },
       },
-      "_mountOrder": 7,
+      "_mountOrder": 5,
       "_pendingCallbacks": null,
       "_pendingElement": null,
       "_pendingForceUpdate": false,
@@ -190,32 +176,25 @@ ShallowWrapper {
             className="divider"
           />
           <div
-            className="cart-content"
+            className="cart-content-wrapper"
           >
-            <Product
-              price={9.99}
-              quantity={1}
-              title="Product 1"
+            <div
+              className="cart-content"
+            >
+              <Product
+                inCart={true}
+                price={9.99}
+                quantity={1}
+                title="Product 1"
+              />
+            </div>
+            <CartCheckout
+              onCheckoutClicked={[MockFunction]}
+              total="9.99"
             />
           </div>
-          <span
-            className="checkout-wrapper"
-          >
-            <p
-              className="checkout-total"
-            >
-              Total: $
-              9.99
-            </p>
-            <button
-              disabled=""
-              onClick={[MockFunction]}
-            >
-              Checkout
-            </button>
-          </span>
         </div>,
-        "_debugID": 14,
+        "_debugID": 10,
         "_renderedOutput": <div
           className="cart-container"
         >
@@ -240,30 +219,23 @@ ShallowWrapper {
             className="divider"
           />
           <div
-            className="cart-content"
+            className="cart-content-wrapper"
           >
-            <Product
-              price={9.99}
-              quantity={1}
-              title="Product 1"
+            <div
+              className="cart-content"
+            >
+              <Product
+                inCart={true}
+                price={9.99}
+                quantity={1}
+                title="Product 1"
+              />
+            </div>
+            <CartCheckout
+              onCheckoutClicked={[MockFunction]}
+              total="9.99"
             />
           </div>
-          <span
-            className="checkout-wrapper"
-          >
-            <p
-              className="checkout-total"
-            >
-              Total: $
-              9.99
-            </p>
-            <button
-              disabled=""
-              onClick={[MockFunction]}
-            >
-              Checkout
-            </button>
-          </span>
         </div>,
       },
       "_renderedNodeType": 0,

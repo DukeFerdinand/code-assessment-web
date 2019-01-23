@@ -2,6 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import Cart from './Cart'
 import Product from './Product'
+import CartCheckout from './CartCheckout'
 
 const setup = (total, products = []) => {
   const actions = {
@@ -15,7 +16,7 @@ const setup = (total, products = []) => {
   return {
     component: component,
     actions: actions,
-    button: component.find('button') || null,
+    CartCheckout: component.find(CartCheckout) || null,
     products: component.find(Product),
     emptyText: component.find('span.cart-empty-text'),
     p: component.find('p.checkout-total')
@@ -30,9 +31,9 @@ describe('Cart component', () => {
       expect(emptyText.text()).toMatch(/<ReactSVG \/>Please add some products to your cart./)
     })
 
-    it('should not display checkout button', () => {
-      const { button } = setup()
-      expect(button.length).toEqual(0)
+    it('should not display CartCheckout component', () => {
+      const { CartCheckout } = setup()
+      expect(CartCheckout.length).toEqual(0)
     })
   });
 
@@ -45,14 +46,11 @@ describe('Cart component', () => {
         quantity: 1
       }
     ]
-    it('should display total', () => {
-      const { p } = setup('76', product)
-      expect(p.text()).toMatch(/^Total: \$76/)
-    })
 
     it('should render products', () => {
       const { products } = setup('9.99', product)
       const props = {
+        inCart: true, // Because we're rendering the products 'inCart'
         title: product[0].title,
         price: product[0].price,
         quantity: product[0].quantity
@@ -61,15 +59,9 @@ describe('Cart component', () => {
       expect(products.at(0).props()).toEqual(props)
     })
 
-    it('should not disable button', () => {
-      const { button } = setup('9.99', product)
-      expect(button.prop('disabled')).toEqual('')
-    })
-
-    it('should call action on button click', () => {
-      const { button, actions } = setup('9.99', product)
-      button.simulate('click')
-      expect(actions.onCheckoutClicked).toBeCalled()
+    it('should render CartCheckout component', () => {
+      const { CartCheckout } = setup('9.99', product)
+      expect(CartCheckout.exists()).toEqual(true)
     })
   })
 
