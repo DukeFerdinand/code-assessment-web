@@ -55,12 +55,111 @@
         bottom: -80px;
 
         &:hover, &:focus {
-          background: rgb(50,123,195);
+          background: $button-primary-hover
         }
 
         &:disabled {
           cursor: initial;
           background: $color-primary-disabled;
+        }
+      }
+    }
+  }
+}
+
+.cart-content {
+  .product {
+    display: flex;
+    // background: ;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    .product-image-wrapper {
+      width: 150px;
+      // height: 125px;
+      .product-image {
+        width: 100%;
+      }
+    }
+    .product-info-upper {
+      height: 100px;
+      margin-left: 10px;
+      position: relative;
+      .product-title {
+        font-size: 1.25em;
+      }
+      .product-price {
+        margin-top: 5px;
+      }
+      .remove-product-link {
+        // TODO: switch back to cursor
+        cursor: not-allowed;
+        flex: .01;
+        color: red - 10;
+        position: absolute;
+        bottom: 10px;
+      }
+    }
+    .product-quantity {
+      display: flex;
+      margin: 10px auto 0 auto;
+      border-radius: 60px;
+      @media (max-width: 900px) {
+        flex-direction: column;
+      }
+
+      %quantity-button {
+        //TODO: Re-implement this once the cart buttons work
+        // cursor: pointer;
+        cursor: not-allowed;
+        height: 40px;
+        width: 80px;
+        flex: 1;
+        background: $button-secondary;
+        // TODO: Re-implement once cart buttons work
+        // &:hover {
+        //   background: $button-primary;
+        //   * {
+        //     fill: white;
+        //   }
+        // }
+      }
+      .minus-button {
+        @extend %quantity-button;
+        border-radius: 30px 0 0 30px;
+        .button-icon-wrapper {
+          margin: 0 auto 5px auto;
+          width: 15px;
+          .button-icon {
+            width: 15px;
+          }
+        }
+      }
+      .product-quantity-input-wrapper {
+        background: $button-secondary;
+        height: 40px;
+        flex: 1;
+        .product-quantity-input {
+          border: none;
+          font: $app-font;
+          font-size: 1em;
+          margin-top: 2px;
+          height: 34px;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      .plus-button {
+        @extend %quantity-button;
+        border-radius: 0 30px 30px 0;
+
+        .button-icon-wrapper {
+          margin: 2px auto 0 auto;
+          padding-right: 10px;
+          width: 15px;
+          .button-icon {
+            width: 15px;
+          }
         }
       }
     }
