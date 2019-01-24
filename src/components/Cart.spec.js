@@ -26,7 +26,17 @@ const setup = (total, products = []) => {
 }
 
 describe('Cart component', () => {
-
+  const product = [
+    {
+      id: 1,
+      productTitle: 'Product 1',
+      price: {
+        value: 9.99,
+        currency: 'USD'
+      },
+      quantity: 1
+    }
+  ]
   describe('when not given a total or products', () => {
     it('should display add some products message', () => {
       const { emptyText } = setup()
@@ -40,20 +50,11 @@ describe('Cart component', () => {
   });
 
   describe('when given product', () => {
-    const product = [
-      {
-        id: 1,
-        title: 'Product 1',
-        price: 9.99,
-        quantity: 1
-      }
-    ]
-
     it('should render products', () => {
       const { products } = setup('9.99', product)
       const props = {
         inCart: true, // Because we're rendering the products 'inCart'
-        title: product[0].title,
+        title: product[0].productTitle,
         price: product[0].price,
         quantity: product[0].quantity,
         removeProductFromCart
@@ -70,14 +71,6 @@ describe('Cart component', () => {
   })
 
   it('should match snapshot', () => {
-    const product = [
-      {
-        id: 1,
-        title: 'Product 1',
-        price: 9.99,
-        quantity: 1
-      }
-    ]
     const { component } = setup('9.99', product)
     expect(component).toMatchSnapshot()
   })
