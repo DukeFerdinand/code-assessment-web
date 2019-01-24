@@ -2,7 +2,6 @@ import { combineReducers } from 'redux'
 import { RECEIVE_PRODUCTS, ADD_TO_CART, REMOVE_FROM_CART } from '../constants/ActionTypes'
 
 const products = (state, action) => {
-  console.log(action)
   switch (action.type) {
     case ADD_TO_CART:
       return {
