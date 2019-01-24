@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { checkout, toggleModal, removeProductFromCart, addToCart } from '../actions'
+import { checkout, toggleModal, removeProductFromCart, addToCart, quantityInputHandler } from '../actions'
 import { getTotal, getCartProducts, getModalStatus } from '../reducers'
 import Cart from '../components/Cart'
 
@@ -12,7 +12,8 @@ const CartContainer = ({
   checkout,
   toggleModal,
   removeProductFromCart,
-  addToCart
+  addToCart,
+  quantityInputHandler
 }) => {
   return (
   <div className={`cart-wrapper ${modalOpen ? 'display-cart' : ''}`}>
@@ -20,6 +21,7 @@ const CartContainer = ({
       products={products}
       total={total}
       addToCart={addToCart}
+      quantityInputHandler={quantityInputHandler}
       removeProductFromCart={removeProductFromCart}
       onCloseCartClicked={toggleModal}
       onCheckoutClicked={() => checkout(products)} />
@@ -49,5 +51,5 @@ const mapStateToProps = (state) => ({
 
 export default connect(
     mapStateToProps,
-    { checkout, toggleModal, removeProductFromCart, addToCart }
+    { checkout, toggleModal, removeProductFromCart, addToCart, quantityInputHandler }
   )(CartContainer)

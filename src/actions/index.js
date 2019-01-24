@@ -58,3 +58,9 @@ export const toggleModal = () => (dispatch, getState) => {
     modalOpen: !ui.modalOpen
   })
 }
+
+export const quantityInputHandler = (event, productId) => (dispatch, getState) => {
+  const { products, cart } = getState()
+  const inputValue = parseInt(event.target.value)
+  console.log(products, cart, inputValue)
+}
