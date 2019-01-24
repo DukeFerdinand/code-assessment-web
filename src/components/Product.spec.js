@@ -14,24 +14,25 @@ const setup = props => {
     availability: component.find('div.product-availability')
   }
 }
+const price = { value: 9.99, currency: 'USD' }
 
 describe('Product component', () => {
   it('should render title and price', () => {
-    const { title, price } = setup({ title: 'Test Product', price: 9.99 })
+    const { title, price } = setup({ title: 'Test Product', price: { value: 9.99, currency: 'USD' } })
     // expect(component.text()).toBe('Test Product - $9.99')
     expect(title.text()).toBe('Test Product')
     expect(price.text()).toBe('$9.99')
   })
 
   it('should match Product snapshot', () => {
-    const { component } = setup({ title: 'Test Product', price: 9.99, inventory: 6 })
+    const { component } = setup({ title: 'Test Product', price: { value: 9.99, currency: 'USD' }, inventory: 6 })
 
     expect(component).toMatchSnapshot()
   })
 
   describe('when given inventory', () => {
     it('should render title, price, and inventory', () => {
-      const { title, price, availability } = setup({ title: 'Test Product', price: 9.99, inventory: 6 })
+      const { title, price, availability } = setup({ title: 'Test Product', price: { value: 9.99, currency: 'USD' }, inventory: 6 })
       expect(title.text()).toBe('Test Product')
       expect(price.text()).toBe('$9.99')
       expect(availability.text()).toBe('6 REMAINING')
@@ -39,12 +40,12 @@ describe('Product component', () => {
   })
   describe('when given no inventory', () => {
     it('should render out of stock message', () => {
-      const { availability } = setup({ title: 'Test Product', price: 9.99, inventory: 0})
+      const { availability } = setup({ title: 'Test Product', price: { value: 9.99, currency: 'USD' }, inventory: 0})
       expect(availability.text()).toBe('OUT OF STOCK')
     })
   })
   describe('when in cart', () => {
-    const { component } = setup({ title: 'Test Product', price: 9.99, inventory: 6, inCart: true })
+    const { component } = setup({ title: 'Test Product', price: { value: 9.99, currency: 'USD' }, inventory: 6, inCart: true })
     describe('it should render "product-quantity" section', () => {
       const productQuantityWrapper = component.find('div.product-quantity')
       it('renders quantity section', () => {
