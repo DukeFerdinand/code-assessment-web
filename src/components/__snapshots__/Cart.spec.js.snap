@@ -40,7 +40,12 @@ ShallowWrapper {
         <Product
           addToCart={[Function]}
           inCart={true}
-          price={9.99}
+          price={
+            Object {
+              "currency": "USD",
+              "value": 9.99,
+            }
+          }
           quantity={1}
           quantityInputHandler={[Function]}
           removeProductFromCart={[Function]}
@@ -86,7 +91,12 @@ ShallowWrapper {
           <Product
             addToCart={[Function]}
             inCart={true}
-            price={9.99}
+            price={
+              Object {
+                "currency": "USD",
+                "value": 9.99,
+              }
+            }
             quantity={1}
             quantityInputHandler={[Function]}
             removeProductFromCart={[Function]}
@@ -112,9 +122,12 @@ ShallowWrapper {
           Array [
             Object {
               "id": 1,
-              "price": 9.99,
+              "price": Object {
+                "currency": "USD",
+                "value": 9.99,
+              },
+              "productTitle": "Product 1",
               "quantity": 1,
-              "title": "Product 1",
             },
           ]
         }
@@ -131,9 +144,12 @@ ShallowWrapper {
           "products": Array [
             Object {
               "id": 1,
-              "price": 9.99,
+              "price": Object {
+                "currency": "USD",
+                "value": 9.99,
+              },
+              "productTitle": "Product 1",
               "quantity": 1,
-              "title": "Product 1",
             },
           ],
           "total": "9.99",
@@ -190,7 +206,12 @@ ShallowWrapper {
               <Product
                 addToCart={[Function]}
                 inCart={true}
-                price={9.99}
+                price={
+                  Object {
+                    "currency": "USD",
+                    "value": 9.99,
+                  }
+                }
                 quantity={1}
                 quantityInputHandler={[Function]}
                 removeProductFromCart={[Function]}
@@ -236,7 +257,12 @@ ShallowWrapper {
               <Product
                 addToCart={[Function]}
                 inCart={true}
-                price={9.99}
+                price={
+                  Object {
+                    "currency": "USD",
+                    "value": 9.99,
+                  }
+                }
                 quantity={1}
                 quantityInputHandler={[Function]}
                 removeProductFromCart={[Function]}
@@ -266,9 +292,12 @@ ShallowWrapper {
       Array [
         Object {
           "id": 1,
-          "price": 9.99,
+          "price": Object {
+            "currency": "USD",
+            "value": 9.99,
+          },
+          "productTitle": "Product 1",
           "quantity": 1,
-          "title": "Product 1",
         },
       ]
     }

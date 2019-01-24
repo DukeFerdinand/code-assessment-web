@@ -1,11 +1,11 @@
 /**
  * Mocking client-server processing
  */
-import _products from './products.json'
-
 const TIMEOUT = 100
 
+const url = 'http://tech.work.co/shopping-cart/products.json'
+
 export default {
-  getProducts: (cb, timeout) => setTimeout(() => cb(_products), timeout || TIMEOUT),
+  getProducts: cb => fetch(url).then(res => res.json()).then(data => cb(data)),
   buyProducts: (payload, cb, timeout) => setTimeout(() => cb(), timeout || TIMEOUT)
 }

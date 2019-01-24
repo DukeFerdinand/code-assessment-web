@@ -21,7 +21,7 @@ const Product = ({ price, inventory, title, quantity, inCart, removeProductFromC
         {title}
       </div>
       <div className="product-price">
-        &#36;{price}
+        &#36;{price.value}
       </div>
       { inCart ? <span onClick={() => removeProductFromCart()} className="remove-product-link">Remove</span> : null }
     </div>
@@ -68,7 +68,10 @@ const Product = ({ price, inventory, title, quantity, inCart, removeProductFromC
 )
 
 Product.propTypes = {
-  price: PropTypes.number,
+  price: PropTypes.shape({
+    value: PropTypes.number,
+    currency: PropTypes.string
+  }),
   inventory: PropTypes.number,
   title: PropTypes.string,
   quantity: PropTypes.number,
