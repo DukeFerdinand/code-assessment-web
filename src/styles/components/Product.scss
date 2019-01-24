@@ -2,23 +2,59 @@
 
 .product-wrapper {
   width: 100%;
-  // max-width: 
-  height: 275px;
+  height: auto;
+  max-height: 275px;
   display: flex;
   margin: 30px auto;
+
+  @media (max-width: $tablet) {
+    max-height: 175px;
+    margin: 20px auto;
+  }
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    max-height: initial;
+    max-width: 350px;
+  }
   .product-image {
-    flex: .60;
+    flex: .8;
     background: black + 200;
-    width: 50px;
     height: 100%;
+    max-height: 250px;
+    max-width: 400px;
     border-radius: 10px 0 0 10px;
+
+    @media (max-width: $tablet) {
+      max-width: 272px;
+      max-height: 175px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    @media (max-width: $mobile) {
+      max-width: 350px;
+      max-height: 250px;
+      border-radius: 10px 10px 0 0;
+    }
   }
   .product-info-wrapper {
     flex: 1;
     border-radius: 0 8px 8px 0;
     background: white;
+
+    @media (max-width: $mobile) {
+      border-radius: 0 0 10px 10px;
+    }
     .product-info {
+      box-sizing: border-box;
+      height: 100%;
       padding: 30px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @media (max-width: $tablet) {
+        padding: 20px 20px 20px 40px;
+      }
 
       .product-info-upper {
         display: flex;
@@ -27,11 +63,20 @@
         .product-title {
           font-size: 2.5em;
           color: $text-color-main;
+
+          @media (max-width: $tablet) {
+            font-size: 1.5em;
+          }
         }
         .product-price {
           font-size: 1.3em;
           position: relative;
           top: 10px;
+
+          @media (max-width: $tablet) {
+            font-size: 1.1em;
+            top: 5px;
+          }
         }
       }
       .product-availability {
@@ -40,6 +85,10 @@
         color: $text-color-secondary;
         &.out-of-stock {
           color: #e74c3c;
+        }
+
+        @media (max-width: $tablet) {
+          font-size: .75em;
         }
       }
       .product-action {
@@ -51,8 +100,12 @@
         font-size: .75em;
         padding: 10px 10px;
 
-        position: relative;
-        bottom: -80px;
+        @media (max-width: $tablet) {
+          bottom: 0px;
+          padding: 8px;
+          width: 120px;
+          font-size: .7em;
+        }
 
         &:hover, &:focus {
           background: $button-primary-hover
@@ -75,7 +128,9 @@
     margin-bottom: 25px;
     .product-image-wrapper {
       width: 150px;
-      // height: 125px;
+        @media (max-width: $mobile) {
+          width: 125px;
+        }
       .product-image {
         width: 100%;
       }
@@ -83,7 +138,12 @@
     .product-info-upper {
       height: 100px;
       margin-left: 10px;
-      position: relative;
+      position: relative; // Needed to position product removal link
+
+      @media (max-width: $mobile) {
+        height: 90px;
+      }
+
       .product-title {
         font-size: 1.25em;
       }
@@ -103,9 +163,6 @@
       display: flex;
       margin: 10px auto 0 auto;
       border-radius: 60px;
-      @media (max-width: 900px) {
-        flex-direction: column;
-      }
 
       %quantity-button {
         //TODO: Re-implement this once the cart buttons work

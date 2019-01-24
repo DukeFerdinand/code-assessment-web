@@ -16,6 +16,7 @@
   margin-right: auto;
 
   display: none;
+
   .cart-container {
     z-index: 3;
     width: 100%;
@@ -31,6 +32,15 @@
     left: 0;
     right: 0;
     margin: 50px auto;
+
+    @media (max-width: $mobile) {
+      border-radius: 0;
+      margin: 0;
+      width: 100vw;
+      max-width: 100vw;
+      height: 100vh;
+      max-height: 100vh;
+    }
 
     .cart-close-wrapper {
       position: absolute;
@@ -53,6 +63,9 @@
     .cart-content-wrapper {
       max-height: 425px;
       overflow: scroll;
+      @media (max-width: $mobile) {
+        max-height: calc(85vh - 45px );
+      }
       .cart-content {
         height: auto;
         min-height: 150px;

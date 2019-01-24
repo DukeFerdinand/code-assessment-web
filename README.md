@@ -26,5 +26,9 @@ Please also update this README file: we'd love to see notes on your decision-mak
 
 #### [Build Log 1](/build-logs/build-log-1.md) - Finished cart layout
 
+#### [Build Log 1.5](/build-logs/build-log-1-5.md) - Finished Tablet layout
+
+#### [Build Log 1.5.5](/build-logs/build-log-1-5-5.md) - Finished Mobile layout
+
 ## To Build
 Run `npm run build` or `yarn build`. See [Build Log 0](/build-logs/build-log-0.md) for notes on serving
