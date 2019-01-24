@@ -24,7 +24,12 @@ ShallowWrapper {
       >
         <Product
           inventory={6}
-          price={9.99}
+          price={
+            Object {
+              "currency": "USD",
+              "value": 9.99,
+            }
+          }
           title="Product 1"
         />
         <button
@@ -54,7 +59,12 @@ ShallowWrapper {
         >
           <Product
             inventory={6}
-            price={9.99}
+            price={
+              Object {
+                "currency": "USD",
+                "value": 9.99,
+              }
+            }
             title="Product 1"
           />
           <button
@@ -79,8 +89,11 @@ ShallowWrapper {
         product={
           Object {
             "inventory": 6,
-            "price": 9.99,
-            "title": "Product 1",
+            "price": Object {
+              "currency": "USD",
+              "value": 9.99,
+            },
+            "productTitle": "Product 1",
           }
         }
       />,
@@ -94,8 +107,11 @@ ShallowWrapper {
           "onAddToCartClicked": [MockFunction],
           "product": Object {
             "inventory": 6,
-            "price": 9.99,
-            "title": "Product 1",
+            "price": Object {
+              "currency": "USD",
+              "value": 9.99,
+            },
+            "productTitle": "Product 1",
           },
         },
         "refs": Object {},
@@ -134,7 +150,12 @@ ShallowWrapper {
             >
               <Product
                 inventory={6}
-                price={9.99}
+                price={
+                  Object {
+                    "currency": "USD",
+                    "value": 9.99,
+                  }
+                }
                 title="Product 1"
               />
               <button
@@ -164,7 +185,12 @@ ShallowWrapper {
             >
               <Product
                 inventory={6}
-                price={9.99}
+                price={
+                  Object {
+                    "currency": "USD",
+                    "value": 9.99,
+                  }
+                }
                 title="Product 1"
               />
               <button
@@ -193,8 +219,11 @@ ShallowWrapper {
     product={
       Object {
         "inventory": 6,
-        "price": 9.99,
-        "title": "Product 1",
+        "price": Object {
+          "currency": "USD",
+          "value": 9.99,
+        },
+        "productTitle": "Product 1",
       }
     }
   />,
