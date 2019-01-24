@@ -41,6 +41,7 @@ ShallowWrapper {
           inCart={true}
           price={9.99}
           quantity={1}
+          removeProductFromCart={[Function]}
           title="Product 1"
         />
       </div>
@@ -84,6 +85,7 @@ ShallowWrapper {
             inCart={true}
             price={9.99}
             quantity={1}
+            removeProductFromCart={[Function]}
             title="Product 1"
           />
         </div>
@@ -185,6 +187,7 @@ ShallowWrapper {
                 inCart={true}
                 price={9.99}
                 quantity={1}
+                removeProductFromCart={[Function]}
                 title="Product 1"
               />
             </div>
@@ -228,6 +231,7 @@ ShallowWrapper {
                 inCart={true}
                 price={9.99}
                 quantity={1}
+                removeProductFromCart={[Function]}
                 title="Product 1"
               />
             </div>
