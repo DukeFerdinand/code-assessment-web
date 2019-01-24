@@ -45,7 +45,8 @@ const Product = ({ price, inventory, title, quantity, inCart, removeProductFromC
           <span className="product-quantity-input-wrapper">
             <input
               className="product-quantity-input"
-              type="number"
+              type="text"
+              disabled={true}
               value={quantity}
               onChange={e => quantityInputHandler(e)}
             />
