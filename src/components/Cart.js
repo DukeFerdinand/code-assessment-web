@@ -9,12 +9,16 @@ import CartIcon from '../assets/cart.svg'
 
 import '../styles/components/Cart.scss'
 
-const Cart  = ({ products, total, onCloseCartClicked, onCheckoutClicked }) => {
+const Cart  = ({ products, total, onCloseCartClicked, onCheckoutClicked, removeProductFromCart }) => {
   const hasProducts = products.length > 0
   const nodes = hasProducts ? (
     products.map(product =>
       <Product
         inCart={true}
+        removeProductFromCart={quantity => {
+            removeProductFromCart(product.id, quantity)
+          }
+        }
         title={product.title}
         price={product.price}
         quantity={product.quantity}

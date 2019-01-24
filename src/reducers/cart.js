@@ -1,5 +1,6 @@
 import {
   ADD_TO_CART,
+  REMOVE_FROM_CART,
   CHECKOUT_REQUEST,
   CHECKOUT_FAILURE
 } from '../constants/ActionTypes'
@@ -16,22 +17,45 @@ const addedIds = (state = initialState.addedIds, action) => {
         return state
       }
       return [ ...state, action.productId ]
+    case REMOVE_FROM_CART:
+      // Had to pass this in as it's the easiest way to access the 'inCart' total
+      if (action.quantityInCart - action.quantity === 0) {
+        return [...state.filter(productId => productId !== action.productId)]
+      }
+      return state
     default:
       return state
   }
 }
 
 const quantityById = (state = initialState.quantityById, action) => {
+  console.log(action)
   switch (action.type) {
     case ADD_TO_CART:
-      const { productId } = action
+      let { productId } = action
       return { ...state,
         [productId]: (state[productId] || 0) + 1
+      }
+    case REMOVE_FROM_CART:
+      // state[action.productId] will be the number of said item in the cart
+      if (state[action.productId] - action.quantity === 0) {
+        // Easy one-liner to remove the product from the state object
+        const { [action.productId]: _, ...newState } = state
+        return {
+          ...newState
+        }
+      }
+      console.log(state)
+      return {
+        ...state,
+        [action.productId]: state[action.productId] - action.quantity
       }
     default:
       return state
   }
 }
+
+
 
 export const getQuantity = (state, productId) =>
   state.quantityById[productId] || 0
