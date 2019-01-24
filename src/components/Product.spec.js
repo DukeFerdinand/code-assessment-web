@@ -43,4 +43,17 @@ describe('Product component', () => {
       expect(availability.text()).toBe('OUT OF STOCK')
     })
   })
+  describe('when in cart', () => {
+    const { component } = setup({ title: 'Test Product', price: 9.99, inventory: 6, inCart: true })
+    describe('it should render "product-quantity" section', () => {
+      const productQuantityWrapper = component.find('div.product-quantity')
+      it('renders quantity section', () => {
+        expect(productQuantityWrapper.exists()).toBe(true)
+      })
+      it('renders quantity increase and decrease buttons', () => {
+        expect(productQuantityWrapper.find('button.minus-button').exists()).toBe(true)
+        expect(productQuantityWrapper.find('button.plus-button').exists()).toBe(true)
+      })
+    })
+  })
 })

@@ -30,5 +30,7 @@ Please also update this README file: we'd love to see notes on your decision-mak
 
 #### [Build Log 1.5.5](/build-logs/build-log-1-5-5.md) - Finished Mobile layout
 
+#### [Build Log 2.0](/build-logs/build-log-2.md) - Finished `ADD_TO_CART` and `REMOVE_FROM_CART` integration
+
 ## To Build
 Run `npm run build` or `yarn build`. See [Build Log 0](/build-logs/build-log-0.md) for notes on serving

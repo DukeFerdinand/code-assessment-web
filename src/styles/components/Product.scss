@@ -152,7 +152,7 @@
       }
       .remove-product-link {
         // TODO: switch back to cursor
-        cursor: not-allowed;
+        cursor: pointer;
         flex: .01;
         color: red - 10;
         position: absolute;
@@ -165,20 +165,17 @@
       border-radius: 60px;
 
       %quantity-button {
-        //TODO: Re-implement this once the cart buttons work
-        // cursor: pointer;
-        cursor: not-allowed;
+        cursor: pointer;
         height: 40px;
         width: 80px;
         flex: 1;
         background: $button-secondary;
-        // TODO: Re-implement once cart buttons work
-        // &:hover {
-        //   background: $button-primary;
-        //   * {
-        //     fill: white;
-        //   }
-        // }
+        &:hover {
+          background: $button-primary;
+          * {
+            fill: white;
+          }
+        }
       }
       .minus-button {
         @extend %quantity-button;

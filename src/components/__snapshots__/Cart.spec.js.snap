@@ -38,9 +38,12 @@ ShallowWrapper {
         className="cart-content"
       >
         <Product
+          addToCart={[Function]}
           inCart={true}
           price={9.99}
           quantity={1}
+          quantityInputHandler={[Function]}
+          removeProductFromCart={[Function]}
           title="Product 1"
         />
       </div>
@@ -81,9 +84,12 @@ ShallowWrapper {
           className="cart-content"
         >
           <Product
+            addToCart={[Function]}
             inCart={true}
             price={9.99}
             quantity={1}
+            quantityInputHandler={[Function]}
+            removeProductFromCart={[Function]}
             title="Product 1"
           />
         </div>
@@ -182,9 +188,12 @@ ShallowWrapper {
               className="cart-content"
             >
               <Product
+                addToCart={[Function]}
                 inCart={true}
                 price={9.99}
                 quantity={1}
+                quantityInputHandler={[Function]}
+                removeProductFromCart={[Function]}
                 title="Product 1"
               />
             </div>
@@ -225,9 +234,12 @@ ShallowWrapper {
               className="cart-content"
             >
               <Product
+                addToCart={[Function]}
                 inCart={true}
                 price={9.99}
                 quantity={1}
+                quantityInputHandler={[Function]}
+                removeProductFromCart={[Function]}
                 title="Product 1"
               />
             </div>

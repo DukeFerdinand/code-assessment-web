@@ -4,6 +4,8 @@ import Cart from './Cart'
 import Product from './Product'
 import CartCheckout from './CartCheckout'
 
+import { removeProductFromCart } from '../actions'
+
 const setup = (total, products = []) => {
   const actions = {
     onCheckoutClicked: jest.fn()
@@ -53,10 +55,12 @@ describe('Cart component', () => {
         inCart: true, // Because we're rendering the products 'inCart'
         title: product[0].title,
         price: product[0].price,
-        quantity: product[0].quantity
+        quantity: product[0].quantity,
+        removeProductFromCart
       }
-
-      expect(products.at(0).props()).toEqual(props)
+      // Visually equal props were not being considered equal because of the
+      // Function prop, stringifying them works
+      expect(JSON.stringify(products.at(0).props())).toEqual(JSON.stringify(props))
     })
 
     it('should render CartCheckout component', () => {

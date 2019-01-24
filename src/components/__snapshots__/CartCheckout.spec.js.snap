@@ -144,7 +144,7 @@ ShallowWrapper {
   "renderer": ReactShallowRenderer {
     "_instance": ShallowComponentWrapper {
       "_calledComponentWillUnmount": false,
-      "_compositeType": 0,
+      "_compositeType": 2,
       "_context": Object {},
       "_currentElement": <CartCheckout
         onCheckoutClicked={[MockFunction]}
@@ -153,7 +153,7 @@ ShallowWrapper {
       "_debugID": 3,
       "_hostContainerInfo": null,
       "_hostParent": null,
-      "_instance": CartCheckout {
+      "_instance": StatelessComponent {
         "_reactInternalInstance": [Circular],
         "context": Object {},
         "props": Object {
@@ -162,11 +162,6 @@ ShallowWrapper {
         },
         "refs": Object {},
         "state": null,
-        "totals": Object {
-          "subtotal": "$500.01",
-          "tax": "NaN",
-          "total": "NaN",
-        },
         "updater": Object {
           "enqueueCallback": [Function],
           "enqueueCallbackInternal": [Function],

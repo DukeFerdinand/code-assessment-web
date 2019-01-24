@@ -23,6 +23,18 @@ export const addToCart = productId => (dispatch, getState) => {
   }
 }
 
+export const removeProductFromCart = (productId, quantity) => (dispatch, getState) => {
+  dispatch({
+    type: types.REMOVE_FROM_CART,
+    productId,
+    get quantity() {
+      return quantity || this.quantityInCart
+    },
+    quantityInCart: getState().cart.quantityById[productId],
+    inventory: getState().products.byId[productId].inventory
+  })
+}
+
 export const checkout = products => (dispatch, getState) => {
   const { cart } = getState()
 
@@ -45,4 +57,10 @@ export const toggleModal = () => (dispatch, getState) => {
     type: types.TOGGLE_CART_MODAL,
     modalOpen: !ui.modalOpen
   })
+}
+
+export const quantityInputHandler = (event, productId) => (dispatch, getState) => {
+  const { products, cart } = getState()
+  const inputValue = parseInt(event.target.value)
+  console.log(products, cart, inputValue)
 }

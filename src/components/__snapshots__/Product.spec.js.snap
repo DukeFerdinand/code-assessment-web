@@ -69,7 +69,7 @@ ShallowWrapper {
         price={9.99}
         title="Test Product"
       />,
-      "_debugID": 3,
+      "_debugID": 5,
       "_hostContainerInfo": null,
       "_hostParent": null,
       "_instance": StatelessComponent {
@@ -93,7 +93,7 @@ ShallowWrapper {
           "validateCallback": [Function],
         },
       },
-      "_mountOrder": 2,
+      "_mountOrder": 3,
       "_pendingCallbacks": null,
       "_pendingElement": null,
       "_pendingForceUpdate": false,
@@ -124,7 +124,7 @@ ShallowWrapper {
             6 REMAINING
           </div>
         </div>,
-        "_debugID": 4,
+        "_debugID": 6,
         "_renderedOutput": <div
           className="product"
         >

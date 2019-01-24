@@ -9,12 +9,32 @@ import CartIcon from '../assets/cart.svg'
 
 import '../styles/components/Cart.scss'
 
-const Cart  = ({ products, total, onCloseCartClicked, onCheckoutClicked }) => {
+const Cart  = ({
+  products,
+  total,
+  onCloseCartClicked,
+  onCheckoutClicked,
+  removeProductFromCart,
+  addToCart,
+  quantityInputHandler
+}) => {
   const hasProducts = products.length > 0
   const nodes = hasProducts ? (
     products.map(product =>
       <Product
         inCart={true}
+        quantityInputHandler={event => {
+            quantityInputHandler(event, product.id)
+          }
+        }
+        addToCart={quantity => {
+          console.log('calling addToCart')
+          addToCart(product.id)
+        }}
+        removeProductFromCart={quantity => {
+            removeProductFromCart(product.id, quantity)
+          }
+        }
         title={product.title}
         price={product.price}
         quantity={product.quantity}
@@ -64,7 +84,9 @@ Cart.propTypes = {
   products: PropTypes.array,
   total: PropTypes.string,
   onCheckoutClicked: PropTypes.func,
-  onCloseCartClicked: PropTypes.func
+  onCloseCartClicked: PropTypes.func,
+  removeProductFromCart: PropTypes.func,
+  addToCart: PropTypes.func
 }
 
 export default Cart

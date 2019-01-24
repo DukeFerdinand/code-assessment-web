@@ -75,6 +75,44 @@ describe('reducers', () => {
           ])
         })
 
+      describe('when an item is removed from the cart', () => {
+        beforeEach(() => {
+          state = reducer(state, { type: 'REMOVE_FROM_CART', productId: 1, quantity: 1, quantityInCart: 1 })
+        })
+        it('the inventory is increased', () => {
+          expect(products.getVisibleProducts(state)).toEqual([
+            {
+              id: 1,
+              title: 'Product 1',
+              inventory: 2
+            }, {
+              id: 2,
+              title: 'Product 2',
+              inventory: 1
+            }
+          ])
+        })
+      });
+
+      describe('when multiple items are removed from the cart', () => {
+        beforeEach(() => {
+          state = reducer(state, { type: 'REMOVE_FROM_CART', productId: 1, quantity: 5, quantityInCart: 5 })
+        })
+        it('the inventory is increased by the right amount', () => {
+          expect(products.getVisibleProducts(state)).toEqual([
+            {
+              id: 1,
+              title: 'Product 1',
+              inventory: 6 // Assuming it starts at 1
+            }, {
+              id: 2,
+              title: 'Product 2',
+              inventory: 1
+            }
+          ])
+        })
+      })
+
       })
 
     })
