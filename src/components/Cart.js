@@ -9,12 +9,16 @@ import CartIcon from '../assets/cart.svg'
 
 import '../styles/components/Cart.scss'
 
-const Cart  = ({ products, total, onCloseCartClicked, onCheckoutClicked, removeProductFromCart }) => {
+const Cart  = ({ products, total, onCloseCartClicked, onCheckoutClicked, removeProductFromCart, addToCart }) => {
   const hasProducts = products.length > 0
   const nodes = hasProducts ? (
     products.map(product =>
       <Product
         inCart={true}
+        addToCart={quantity => {
+          console.log('calling addToCart')
+          addToCart(product.id)
+        }}
         removeProductFromCart={quantity => {
             removeProductFromCart(product.id, quantity)
           }
@@ -69,7 +73,8 @@ Cart.propTypes = {
   total: PropTypes.string,
   onCheckoutClicked: PropTypes.func,
   onCloseCartClicked: PropTypes.func,
-  removeProductFromCart: PropTypes.func
+  removeProductFromCart: PropTypes.func,
+  addToCart: PropTypes.func
 }
 
 export default Cart

@@ -1,16 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { checkout, toggleModal, removeProductFromCart } from '../actions'
+import { checkout, toggleModal, removeProductFromCart, addToCart } from '../actions'
 import { getTotal, getCartProducts, getModalStatus } from '../reducers'
 import Cart from '../components/Cart'
 
-const CartContainer = ({ products, total, modalOpen, checkout, toggleModal, removeProductFromCart }) => {
+const CartContainer = ({
+  products,
+  total,
+  modalOpen,
+  checkout,
+  toggleModal,
+  removeProductFromCart,
+  addToCart
+}) => {
   return (
   <div className={`cart-wrapper ${modalOpen ? 'display-cart' : ''}`}>
     <Cart
       products={products}
       total={total}
+      addToCart={addToCart}
       removeProductFromCart={removeProductFromCart}
       onCloseCartClicked={toggleModal}
       onCheckoutClicked={() => checkout(products)} />
@@ -25,7 +34,11 @@ CartContainer.propTypes = {
     quantity: PropTypes.number.isRequired
   })).isRequired,
   total: PropTypes.string,
-  checkout: PropTypes.func.isRequired
+  checkout: PropTypes.func.isRequired,
+  modalOpen: PropTypes.bool,
+  toggleModal: PropTypes.func,
+  removeProductFromCart: PropTypes.func,
+  addToCart: PropTypes.func
 }
 
 const mapStateToProps = (state) => ({
@@ -34,4 +47,7 @@ const mapStateToProps = (state) => ({
   modalOpen: getModalStatus(state)
 })
 
-export default connect(mapStateToProps, { checkout, toggleModal, removeProductFromCart })(CartContainer)
+export default connect(
+    mapStateToProps,
+    { checkout, toggleModal, removeProductFromCart, addToCart }
+  )(CartContainer)

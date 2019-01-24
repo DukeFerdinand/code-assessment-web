@@ -5,7 +5,7 @@ import ReactSVG from 'react-svg'
 import images from '../assets/images'
 import icons from '../assets/icons/index'
 
-const Product = ({ price, inventory, title, quantity, inCart, removeProductFromCart }) => (
+const Product = ({ price, inventory, title, quantity, inCart, removeProductFromCart, addToCart }) => (
   <div className="product">
     {
       inCart ? (
@@ -45,7 +45,10 @@ const Product = ({ price, inventory, title, quantity, inCart, removeProductFromC
           <span className="product-quantity-input-wrapper">
             <input className="product-quantity-input" type="text" value={quantity}/>
           </span>
-          <button className="plus-button">
+          <button
+            className="plus-button"
+            onClick={() => addToCart(1)}
+            >
             <ReactSVG
               className="button-icon-wrapper"
               svgClassName="button-icon"
@@ -64,7 +67,8 @@ Product.propTypes = {
   title: PropTypes.string,
   quantity: PropTypes.number,
   inCart: PropTypes.bool,
-  removeProductFromCart: PropTypes.func
+  removeProductFromCart: PropTypes.func,
+  addToCart: PropTypes.func
 }
 
 export default Product
