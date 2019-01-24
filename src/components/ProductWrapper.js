@@ -18,12 +18,12 @@ const ProductWrapper = ({ product, onAddToCartClicked }) => (
   <div className="product-wrapper">
 
     {/* This would ideally be replaced with a DB stored url */}
-    <img className="product-image" src={images[product.title] || images.NotFound} alt="test"/>
+    <img className="product-image" src={images[product.productTitle] || images.NotFound} alt="test"/>
 
     <div className="product-info-wrapper">
       <div className="product-info">
         <Product
-          title={product.title}
+          title={product.productTitle}
           price={product.price}
           inventory={product.inventory} />
         <button
@@ -39,8 +39,11 @@ const ProductWrapper = ({ product, onAddToCartClicked }) => (
 
 ProductWrapper.propTypes = {
   product: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
+    productTitle: PropTypes.string.isRequired,
+    price: PropTypes.shape({
+      value: PropTypes.number,
+      currency: PropTypes.string
+    }),
     inventory: PropTypes.number.isRequired
   }).isRequired,
   onAddToCartClicked: PropTypes.func.isRequired

@@ -35,7 +35,7 @@ const Cart  = ({
             removeProductFromCart(product.id, quantity)
           }
         }
-        title={product.title}
+        title={product.productTitle}
         price={product.price}
         quantity={product.quantity}
         key={product.id}
