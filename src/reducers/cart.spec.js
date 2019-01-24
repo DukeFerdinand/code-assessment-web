@@ -39,5 +39,20 @@ describe('reducers', () => {
         })
       })
     })
+
+    describe('should handle REMOVE_FROM_CART action', () => {
+      expect(
+        cart({ addedIds: [1], quantityById: { 1: 1 } }, {
+          type: 'REMOVE_FROM_CART',
+          productId: 1,
+          quantity: 1,
+          quantityInCart: 1,
+          inventory: 1
+        }))
+        .toEqual({
+          addedIds: [],
+          quantityById: {}
+        })
+    });
   })
 })

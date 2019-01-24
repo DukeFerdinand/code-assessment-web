@@ -29,7 +29,6 @@ const addedIds = (state = initialState.addedIds, action) => {
 }
 
 const quantityById = (state = initialState.quantityById, action) => {
-  console.log(action)
   switch (action.type) {
     case ADD_TO_CART:
       let { productId } = action
@@ -37,7 +36,7 @@ const quantityById = (state = initialState.quantityById, action) => {
         [productId]: (state[productId] || 0) + 1
       }
     case REMOVE_FROM_CART:
-      // state[action.productId] will be the number of said item in the cart
+      // Catch if the item quantity will drop to 0
       if (state[action.productId] - action.quantity === 0) {
         // Easy one-liner to remove the product from the state object
         const { [action.productId]: _, ...newState } = state
@@ -45,7 +44,8 @@ const quantityById = (state = initialState.quantityById, action) => {
           ...newState
         }
       }
-      console.log(state)
+
+      // Else subtract as expected
       return {
         ...state,
         [action.productId]: state[action.productId] - action.quantity
